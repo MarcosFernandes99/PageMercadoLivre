@@ -1,20 +1,17 @@
 import NavBar from "../moleculas/NavBar"
 import Benefits from "../moleculas/benefits"
-import Cards from "../moleculas/Cards"
+import Products from "./Products"
 
 
 const Home: React.FC = () => {
 
     return (
         <>
-
-        <NavBar></NavBar>
-        <Benefits></Benefits>
-        <Cards></Cards>
-
+            <NavBar></NavBar>
+            <Benefits></Benefits>
+            <Products></Products>
         </>
     )
-
 }
 
 

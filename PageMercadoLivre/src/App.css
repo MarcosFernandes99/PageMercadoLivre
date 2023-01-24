@@ -9,7 +9,7 @@ header {
 }
 
 .search{
-  height: 7vh;
+  height: 5vh;
 }
 
 .input {
@@ -18,7 +18,7 @@ header {
 
 .navegation {
   border: 0.5vh solid black;
-  height: 7vh;
+  height: 5vh;
 }
 
 .category{
@@ -28,12 +28,17 @@ header {
 .benefits{
   display: flex;
   justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: rgb(181, 201, 255);
+  border-radius: 20px;
 }
 
 .benefit{
   height: 15vh;
-  width: 15vw;
-  background-color: rgb(199, 199, 199);
+  margin-left: 3vw;
+  width: 20vw;
+  
 }
 
 h3{
@@ -43,22 +48,20 @@ h3{
 .cards{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 40vh);
+  grid-template-rows: repeat(4, 30vh);
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-left: 10vw;
   margin-right: 10vw;
   gap: 1vw;
 }
-
 .card{
-  background-color: rgb(199, 199, 199);
-  height: 40vh;
+  border:0.3vh solid black;
+  border-radius: 20px;
 }
-
 img{
-  margin-top: 3vh;
-  border-radius: 25px;
+  height: 14vh;
+  margin-top: 2vh;
 }
 
 

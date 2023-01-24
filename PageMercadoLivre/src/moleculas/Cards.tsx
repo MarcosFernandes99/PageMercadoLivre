@@ -1,32 +1,32 @@
-import Image from "../atomos/Image"
+import Card from "../atomos/Card"
 
-interface ICards {
-    src: string;
-    alt:string;
-    altura: string;
+export interface IProduct {
+    
+        nome:string;
+        valor:string;
+        url:string;
+        id:string;
+    
 }
 
-const Cards: React.FC<ICards> = (props) => {
+interface ICards {
+    data: IProduct[]
+    status: string
+}
 
+
+const Cards: React.FC<ICards> = ({ data, status}) => {
+    const card = (produtos: IProduct[]) => {
+        return produtos.map((produto) => {
+            return <Card key={produto.id }id={produto.id} nome={produto.nome} valor={produto.valor} url={produto.url} ></Card>
+        });
+    };
     return (
-
-        <>
-            <section className="cards">
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-                <div className="card"><Image src="https://static.appgeek.com.br/imagens/iphone-13-pro-max-3-cke.jpg" alt="phone1" altura="270"> 
-                </Image></div>
-            </section>
-
-        </>
+        <div>
+            {status === "loading" && <div>Loading...</div>}
+            {status === "error" && <div>Error fetching produtos</div>}
+            {status === "success" && <section className="cards"> {card(data)}</section>}
+        </div>
     )
 }
 

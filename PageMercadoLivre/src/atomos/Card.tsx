@@ -14,12 +14,6 @@ const Img: React.FC<IProduct> = (props) => {
 
             </div>
 
-                
-
-             
-
-          
-
     )
 }
 

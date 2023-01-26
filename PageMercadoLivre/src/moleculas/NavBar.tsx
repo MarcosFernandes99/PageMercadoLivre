@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const NavBar: React.FC = () => {
 
     return (
@@ -12,8 +14,8 @@ const NavBar: React.FC = () => {
             <section className="navegation">
                 <span className="category" >Categorias</span>
                 <span className="category" >Ofertas do dia</span>
-                <span className="category" >Histórico</span>
-                <span className="category" >Moda</span>
+                <a className="category" href="/" >Produtos</a>
+                <a className="category" href="/Cadastro" >Cadastro</a>
             </section>
         </header>
         

@@ -82,3 +82,12 @@ button{
   margin: auto;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: white;
+}
+

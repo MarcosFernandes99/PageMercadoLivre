@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Cadastro from './moleculas/Cadastro';
+import CadastroFormik from './moleculas/CadastroFormik';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,7 +17,7 @@ root.render(
       <Routes>
 
         <Route path="/" element={<App />} />
-        <Route path="/Cadastro" element={<Cadastro />} />
+        <Route path="/Cadastro" element={<CadastroFormik />} />
 
       </Routes>
 

@@ -43,8 +43,8 @@ const Cards: React.FC<ICards> = ({ data, status }) => {
     return (
         <>
             <div className="btn">
-                <button onClick={handleClickCrescent}>Ordem Crescente</button>
-                <button onClick={handleClickDecrescent}>Ordem Decrescente</button>
+                <button className="btnOrder" onClick={handleClickCrescent}>Ordem Crescente</button>
+                <button className="btnOrder" onClick={handleClickDecrescent}>Ordem Decrescente</button>
             </div>
             <div>
 

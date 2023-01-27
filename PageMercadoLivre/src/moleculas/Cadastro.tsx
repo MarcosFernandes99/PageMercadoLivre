@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Cadastro = () => {
 
-    const [productsList, setProductList] = useState({nome: '', marca: '', valor: '', categoria: '', url: ''})
+    const [productsList, setProductList] = useState({ nome: '', marca: '', valor: '', categoria: '', url: '' })
 
     useEffect(() => {
 
@@ -15,12 +15,12 @@ const Cadastro = () => {
         event.preventDefault()
 
         axios.post("https://apigenerator.dronahq.com/api/YtBbxgqg/produtos", productsList)
+
     }
-    
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setProductList({...productsList, [event.target.name]: event.target.value})
-        
-        
+        setProductList({ ...productsList, [event.target.name]: event.target.value })
+
     }
 
     return (
@@ -28,19 +28,21 @@ const Cadastro = () => {
             <NavBar />
 
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Cadastre seu produto!</h1>
-                <label>Nome</label>
-                <input id="nome" name="nome" type="text" onChange={handleChange}/>
-                <label>Marca</label>
-                <input id="marca" name="marca" type="text" onChange={handleChange}/>
-                <label>Valor</label>
-                <input id="valor" name="valor" type="text" onChange={handleChange}/>
-                <label>Categoria</label>
-                <input id="categoria" name="categoria" type="text" onChange={handleChange}/>
-                <label>Imagem</label>
-                <input id="url" name="url" type="text" onChange={handleChange}/>
-                <input type="submit" />
+                <h1 className="title">Cadastre seu produto!</h1>
+                <label>Nome:</label>
+                <input className="fieldInput" id="nome" name="nome" type="text" onChange={handleChange} />
+                <label>Marca:</label>
+                <input className="fieldInput" id="marca" name="marca" type="text" onChange={handleChange} />
+                <label>Valor:</label>
+                <input className="fieldInput" id="valor" name="valor" type="text" onChange={handleChange} />
+                <label>Categoria:</label>
+                <input className="fieldInput" id="categoria" name="categoria" type="text" onChange={handleChange} />
+                <label>Imagem:</label>
+                <input className="fieldInput" id="url" name="url" type="text" onChange={handleChange} />
+                <button>Enviar</button>
             </form>
+
+
         </>
 
     )

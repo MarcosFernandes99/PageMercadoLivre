@@ -2,15 +2,17 @@
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   background-color: rgb(196, 195, 195);
 }
+
 header {
   text-align: center;
   background-color: yellow;
 }
 
-.search{
+.search {
   height: 5vh;
 }
 
@@ -23,11 +25,11 @@ header {
   height: 5vh;
 }
 
-.category{
+.category {
   margin-left: 4vw;
 }
 
-.benefits{
+.benefits {
   display: flex;
   justify-content: center;
   margin-left: 10vw;
@@ -36,18 +38,18 @@ header {
   border-radius: 20px;
 }
 
-.benefit{
+.benefit {
   height: 15vh;
   margin-left: 3vw;
   width: 20vw;
-  
+
 }
 
-h3{
+h3 {
   margin-top: 2vh;
 }
 
-.cards{
+.cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 30vh);
@@ -57,37 +59,78 @@ h3{
   margin-right: 10vw;
   gap: 1vw;
 }
-.card{
+
+.card {
   background-color: white;
   border-radius: 20px;
 }
-img{
+
+img {
   height: 14vh;
   margin-top: 2vh;
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   margin-top: 2vh;
 }
-button{
+
+.btnOrder {
   background-color: yellow;
+  color: black;
+}
+
+
+button {
+  background-color: rgb(55, 42, 197);
   padding: 10px;
   font-size: 2vh;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
-  margin: auto;
+  margin: 1vh auto;
+  color: aliceblue;
+  width: 7vw;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 25vw;
   margin: auto;
-  margin-top: 10vh;
-  background-color: white;
+  margin-top: 5vh;
+  background-color: rgb(239, 253, 160);
+  border-radius: 5vh;
+  box-shadow: rgba(15, 27, 206, 0.5) 0px 5px 15px; 
 }
 
+.title {
+  margin-top: 2vh;
+  text-align: center;
+  border-bottom: 0.3vh solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding-bottom: 20px;
+}
+
+.fieldInput {
+  height: 5vh;
+  border: none;
+  background-color: rgb(194, 190, 236);
+  outline: 0;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0.5vh;
+  color: black;
+  flex: 1;
+  box-shadow: rgba(10, 7, 209, 0.5) 0px 10px 15px;
+}
+
+label {
+  margin-top: 2vh;
+  margin-left: 2vh;
+  font-weight: bold;
+  font-size: 20px;
+}
